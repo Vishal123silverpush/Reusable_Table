@@ -1,0 +1,15 @@
+.pagination button{
+    border-radius: 7px;
+    padding: 3px;
+}
+.pagination{
+    border-radius: 12px;
+    border: 1px solid black;
+    display: inline;
+    padding: 10px;
+    margin-left: 200px;
+    background-color:aliceblue;
+}
+.pagination button{
+    border: 1px solid rgb(252, 228, 198);
+}

@@ -1,0 +1,112 @@
+<!-- 
+<form action=""  class="Lpage">
+    <div class="login" >
+        <div class="inner">
+            <h1>Login</h1>
+            <div class="line"></div>
+            <div class="inp">
+                <div class="">
+                    <input id="name" type="text" name="Name" formControlName="username" onclick="chk()" placeholder="Username">
+                        
+                    </div>
+                </div>
+
+                    <div>
+                <input type="text" name="Email" formControlName="Email" placeholder="Email">
+
+                <input type="text" name="Password" formControlName="Password" placeholder="Password">
+                <h5>Forgot password</h5>
+                </div>
+
+            </div>
+            <div class="lbtn">
+                <button #btn1 onclick="clk()" >Login</button>
+                <div class="end">
+                    <h5>Not a member?</h5>
+                    <a href="">signup</a>
+                </div>
+            </div>
+        </div>
+</form> -->
+<div class="body">
+    <h1>Paginated Table</h1>
+
+    <table class="inner">
+        <tr>
+            <!-- <th>User Id</th>
+
+            <th>name</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Mobile</th> -->
+            <th>User Id</th>
+            <th>fb_campaign_id</th>
+            <th>mnet_channel_id3</th>
+            <th>mnet_channel_id2</th>
+            <th>campaign_name</th>
+            <th>spend</th>
+            <th>revenue</th>
+            <th>runnning_days</th>
+            <th>profits</th>
+            <th>roas</th>
+            <th>impressions</th>
+            <th>clicks</th>
+            <th>conversions</th>
+            <th>leads</th>
+            <th>cpl_fb</th>
+            <th>rpc</th>
+            <th>cpc</th>
+            <th>ctr</th>
+            <th>running_date"</th>
+            <th>currency"</th>
+            <th>rows"</th>
+            <th>total_spends</th>
+            <th>total_impressions</th>
+            <th>total_clicks</th>
+            <th>account_id</th>
+            <th>cpl_mnet"</th>
+            <th>status"</th>
+        </tr>
+        <tr *ngFor="let item of userList;let totalItems;let i=index">
+            <td>{{i+1+(currentPage*pageSize-10)}}</td>
+            <td>{{item.fb_campaign_id}}</td>
+            <td>{{item.mnet_channel_id3}}</td>
+            <td>{{item.mnet_channel_id2}}</td>
+            <td>{{item.campaign_name}}</td>
+            <td>{{item.spend}}</td>
+            <td>{{item.revenue}}</td>
+            <td>{{item.runnning_days}}</td>
+            <td>{{item.profits}}</td>
+            <td>{{item.roas}}</td>
+            <td>{{item.impressions}}</td>
+            <td>{{item.clicks}}</td>
+            <td>{{item.conversions}}</td>
+            <td>{{item.leads}}</td>
+            <td>{{item.cpl_fb}}</td>
+            <td>{{item.rpc}}</td>
+            <td>{{item.cpc}}</td>
+            <td>{{item.ctr}}</td>
+            <td>{{item.running_date}}</td>
+            <td>{{item.currency}}</td>
+            <td>{{item.rows}}</td>
+            <td>{{item.total_spends}}</td>
+            <td>{{item.total_impressions}}</td>
+            <td>{{item.total_clicks}}</td>
+            <td>{{item.account_id}}</td>
+            <td>{{item.cpl_mnet}}</td>
+            <td>{{item.status}}</td>
+            <!-- <td>{{item.name}}</td>
+        <td>{{item.Username}}</td>
+        <td>{{item.Email}}</td>
+        <td>{{item.Phone}}</td>  -->
+        </tr>
+    </table>
+    <!-- <pagination-controls (pageChange)="currentpage=$event"></pagination-controls> -->
+    <!-- <div class="">
+        <button (click)="onPageChange(currentPage - 1)" [disabled]="currentPage === 1">Previous</button>
+        <span>{{ currentPage }} / {{ Math.ceil(totalItems / pageSize) }}</span>
+        <button (click)="onPageChange(currentPage + 1)"
+            [disabled]="currentPage === (totalItems / pageSize)">Next</button>
+    </div> -->
+</div>
+<!-- <p>{{getJsonValue | json}}</p> -->

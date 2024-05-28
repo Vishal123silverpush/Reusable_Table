@@ -1,0 +1,151 @@
+
+/* .body{
+    width: 100%;
+    height: 100vh;
+padding:0 7px;
+box-sizing: border-box;
+} */
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to bottom right,rgb(33, 145, 145),rgba(90, 173, 173, 0.274),#0799b3);
+    padding: 0px 30px;
+    border-radius: 7px;
+
+
+    
+}
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 100px;
+    position: relative;
+    left: -690px;
+    
+}
+img{
+    width: 100px;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    /* right: -230px; */
+    margin: 0;
+
+}
+
+.panel{
+    background-color: burlywood;
+    display: inline-flex;
+    flex-direction: column;
+    height: 80vh;
+}
+a{
+    text-decoration: none;
+    font-size: 24px;
+    color: black;
+    opacity: .7;
+    border: 2px solid rgb(93, 223, 228);
+    background-color: rgb(93, 223, 228);
+    padding: 7px;
+    border-radius: 7px;
+    transition: all .27s ease-in-out;
+
+}
+a:hover{
+    border: 2px solid rgba(82, 78, 78, 0.685);
+    background-color: rgb(93, 176, 187);
+
+    opacity: 1;
+
+}
+
+/* Resetting default margin and padding */
+body, table, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    
+  }
+  th{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    background-color: rgba(67, 204, 204, 0.685);
+    text-align: center;
+    
+  }
+  .table{
+    width: 100vw;
+    /* height: 100vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+  }
+  /* Styling the table */
+  table {
+    /* width: 100%; */
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    margin: 20px 0;
+    width: 80%;
+    /* border-radius: 70px; */
+
+  }
+  
+  /* Styling the table header */
+  thead {
+    background-color: #f2f2f2;
+  }
+  
+  th {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Styling the table body */
+  tbody {
+    background-color: #fff;
+  }
+  
+  td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Alternating row colors */
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Hover effect */
+  tbody tr:hover {
+    background-color: #f5f5f5;
+  }
+  table:hover{
+    box-shadow: 0 0 17px rgba(67, 204, 204, 0.562);
+
+  }
+  /* .table{
+    opacity: 0;
+    background-color: black;
+    position: absolute;
+  } */
+
+#user a:active + .table table{
+    border: 2px solid black;
+}

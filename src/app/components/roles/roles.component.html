@@ -1,0 +1,16 @@
+<select name="" id="" (change)="filterUsers($event)">
+
+    <option value="">Select One</option>
+    <option value={{item1.role}}  *ngFor="let item1 of userList;" name="search">
+        {{item1.role}}</option>
+</select>
+
+<app-common-table [data]="roles" [columns]="columns"></app-common-table>
+<div class="pagination">
+    <!-- <button (click)="onPrev()" [disabled]="currentPage===1">Previous</button>
+    <span>Page {{currentPage}}</span>
+    <button (click)="Next()">Next</button> -->
+    <button id="prev" (click)="onPrev(currentPage)" [disabled]="currentPage === 1">Previous</button>
+    <span>Page {{ currentPage }} of {{ 3 }}</span>
+    <button id="Next" (click)="Next(currentPage)" [disabled]="currentPage === 3">Next</button>
+</div>

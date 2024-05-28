@@ -1,0 +1,52 @@
+<!-- <nav>
+    <div class="navbar">
+        <div class="logo">Company</div>
+        <div class="tags">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+        </div>
+    </div>
+</nav> -->
+<form class="Lpage">
+    <div class="login">
+        <div class="inner">
+            <h1>Login</h1>
+            <div class="line"></div>
+            <div class="inp">
+
+                <div class="Naam">
+                <input id="name" type="text" name="Name" formControlName="username" placeholder="Username">
+                <div *ngIf="fullname.invalid ">
+
+                </div>
+                </div>
+
+                <input type="text" name="Email" formControlName="Email" placeholder="Email">
+                <div class="pass">
+
+                    <input type="text" name="Password" formControlName="Password" placeholder="Password">
+                    <h5>Forgot password</h5>
+                </div>
+                <!-- <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+                    <div *ngIf="name.errors?.['required']">Name is required.</div>
+                    <div *ngIf="name.errors?.['minlength']">
+                        Name must be at least 4 characters long.
+                    </div>
+                    <div *ngIf="name.errors?.['forbiddenName']">
+                        Name cannot be Bob.
+                    </div>
+                </div> -->
+
+            </div>
+            <div class="lbtn">
+                <button #btn1 onclick="onsubmit()">Login</button>
+                <div class="end">
+                    <h5>Not a member?</h5>
+                    <a href="">signup</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</form>

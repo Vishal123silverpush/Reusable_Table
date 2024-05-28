@@ -1,0 +1,28 @@
+<div class="nav">
+    <nav>
+        . <img src="https://silverpushcdn.s3.amazonaws.com/static/sp-logo.svg" alt="">
+
+        <ul>
+            <!-- <li><a id="tab" href="" routerLink="/tabs" >Home</a></li> -->
+            <!-- <li id="user"><a id="Home" onclick="" routerLinkActive="active" href="" routerLink="/users">Home</a></li> -->
+            <li id="user"><a  href="" routerLink="/users">Users</a></li>
+            <li><a href="" routerLink="/roles">Roles</a></li>
+
+        </ul>
+    </nav>
+</div>
+
+<div class="table" *ngIf="isTableVisible()">
+    <table>
+        <thead>
+            <tr>
+                <th *ngFor="let column of columns">{{ column }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of roles">
+                <td *ngFor="let column of columns">{{ item[column] }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

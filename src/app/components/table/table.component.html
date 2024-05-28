@@ -1,0 +1,163 @@
+<div class="container-fluid">
+    <fieldset class="section-title">
+        <legend>Campaigns list:</legend>
+        <div class="row">
+            <div class="col-md-12">
+                <select id="camp" (change)="filterCampaign($event)" >
+                    <!-- <label>CampaignLists</label> -->
+                    <!-- <option *ngFor="let item of campList;value={{item}}">{{item}} </option> -->
+                    <!-- <select  (click)="getList() *ngFor="let item1 of campList">
+                       on>
+                  </select> -->
+
+                    <!-- <select  >
+                        
+                        <option *ngFor="let item1 of campList " value={{item1}}>Select</option>
+                        <option ></option> -->
+                    <!-- <option
+                          *ngFor="let item1 campList"
+                          [value]="item1"
+                          >{{ item1 }}
+                        </option> -->
+                    <!-- </select> -->
+                    
+                    <option value="">Select One</option>
+                    <option value={{item1.campaign_name}}  *ngFor="let item1 of campList;" name="search">
+                        {{item1.campaign_name}}</option>
+                    <option>
+
+                    </option>
+                </select>
+                <!-- <button id="camp" >FIlter</button> -->
+                <!-- <label for="filter">Filter By Name: </label>
+                <input id="filter" type="text" #filterValue>
+                <button (click)="filterBy(filterValue)">Filter</button> -->
+                <!-- <p id="filterpara">{{item}}</p> -->
+
+
+                <div class="table-sticky-column-inner" id="all">
+
+                    <table class="table-sticky-column table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <!-- <th>User id<i class="fa fa-chevron-down" aria-hidden="true"></i></th>
+                                <th> <i class="fa fa-chevron-down" aria-hidden="true"></i></th>
+                                <th>Revenue <i class="fa fa-chevron-down" aria-hidden="true"></i></th>
+                                <th>Profits <i class="fa fa-chevron-down" aria-hidden="true"></i></th>
+                                <th>ROI <i class="fa fa-chevron-down" aria-hidden="true"></i></th>
+                                <th>Impressions <i class="fa fa-chevron-down" aria-hidden="true"></i></th>
+                                <th>Clicks <i class="fa fa-chevron-down" aria-hidden="true"></i></th>
+                                <th>Conversions(SP) <i class="fa fa-chevron-down" aria-hidden="true"></i></th>
+                                <th>Conversions(NW) <i class="fa fa-chevron-down" aria-hidden="true"></i></th>
+                                <th>Conversions(DS) <i class="fa fa-chevron-down" aria-hidden="true"></i></th>
+                                <th>RPC <i class="fa fa-chevron-down" aria-hidden="true"></i></th>
+                                <th>CPC <i class="fa fa-chevron-down" aria-hidden="true"></i></th> -->
+                                <!-- <th>CTR <i class="fa fa-chevron-down" aria-hidden="true"></i></th> -->
+                                <th>User Id</th>
+                                <th>fb_campaign_id</th>
+                                <th>mnet_channel_id3</th>
+                                <th>mnet_channel_id2</th>
+                                <th>campaign_name</th>
+                                <th>spend</th>
+                                <th>revenue</th>
+                                <th>runnning_days</th>
+                                <th>profits</th>
+                                <th>roas</th>
+                                <th>impressions</th>
+                                <th>clicks</th>
+                                <th>conversions</th>
+                                <th>leads</th>
+                                <th>cpl_fb</th>
+                                <th>rpc</th>
+                                <th>cpc</th>
+                                <th>ctr</th>
+                                <th>running_date"</th>
+                                <th>currency"</th>
+                                <th>rows"</th>
+                                <th>total_spends</th>
+                                <th>total_impressions</th>
+                                <th>total_clicks</th>
+                                <th>account_id</th>
+                                <th>cpl_mnet"</th>
+                                <th>status"</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr *ngFor="let item of userList; let ind=index">
+                                <td>{{ind+(currentPage-1)*pageSize+1}}</td>
+                                <td>{{item.fb_campaign_id}}</td>
+                                <td>{{item.mnet_channel_id3}}</td>
+                                <td>{{item.mnet_channel_id2}}</td>
+                                <td>{{item.campaign_name}}</td>
+                                <td>{{item.spend}}</td>
+                                <td>{{item.revenue}}</td>
+                                <td>{{item.runnning_days}}</td>
+                                <td>{{item.profits}}</td>
+                                <td>{{item.roas}}</td>
+                                <td>{{item.impressions}}</td>
+                                <td>{{item.clicks}}</td>
+                                <td>{{item.conversions}}</td>
+                                <td>{{item.leads}}</td>
+                                <td>{{item.cpl_fb}}</td>
+                                <td>{{item.rpc}}</td>
+                                <td>{{item.cpc}}</td>
+                                <td>{{item.ctr}}</td>
+                                <td>{{item.running_date}}</td>
+                                <td>{{item.currency}}</td>
+                                <td>{{item.rows}}</td>
+                                <td>{{item.total_spends}}</td>
+                                <td>{{item.total_impressions}}</td>
+                                <td>{{item.total_clicks}}</td>
+                                <td>{{item.account_id}}</td>
+                                <td>{{item.cpl_mnet}}</td>
+                                <td>{{item.status}}</td>
+                            </tr>
+                        </tbody>
+                        <tbody *ngIf="userList && userList.length == 0">
+                            <td colspan="8">
+                                <p style="margin:10px 0 0;">No Data Available</p>
+                            </td>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+            <!-- <div class="pagination mt-3">
+                <pagination-controls 
+                    [directionLinks]="directionLinks"
+                    [screenReaderPaginationLabel]="labels.screenReaderPaginationLabel"
+                    [screenReaderPageLabel]="labels.screenReaderPageLabel"
+                    [screenReaderCurrentLabel]="labels.screenReaderCurrentLabel" (pageChange)="pageChanged($event)">
+                </pagination-controls>
+            </div> -->
+            <!-- pagination -->
+            <!-- <div class="pagination mt-3" *ngIf="totalItems > 10">
+                
+            <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+            </div>  -->
+            <div class="paginate">
+                <button id="prev" (click)="onPrev()" [disabled]="currentPage === 1">Previous</button>
+                <span>Page {{ currentPage }} of {{ totalPages }}</span>
+                <button id="Next" (click)="Next()" [disabled]="currentPage === totalPages">Next</button>
+            </div>
+
+        </div>
+    </fieldset>
+</div>
+<!-- <pagination-controls (pageChange)="currentPage=($event)"
+
+></pagination-controls> -->
+
+<!-- <div >
+    <button (click)="onPrev()" [disabled]="currentPage === 1" >Previous</button>
+    <span  ></span>
+    <button (click)="onNext()" [disabled]="currentPage === totalPages">Next</button>
+
+</div> -->
+<!-- <pagination-controls
+    previousLabel="Prev"
+    nextLabel="Next"
+
+    (pageChange)="pageChanged($event)"
+  ></pagination-controls> -->
